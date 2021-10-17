@@ -1,8 +1,9 @@
-# -*- coding: utf-8 -*
+# -*- coding:utf-8 -*-
 '''
-cron: 20 0-23/6 * * *
-new Env('清理重复任务');
+cron: */5 * * * *
+new Env('wskey转换');
 '''
+
 
 import socket
 import base64
