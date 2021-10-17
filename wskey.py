@@ -1,7 +1,7 @@
-# -*- coding:utf-8 -*-
+# -*- coding: utf-8 -*
 '''
-cron: 20 10 */7 * *
-new Env('禁用重复任务');
+cron: 15 */8 * * * wskey.py
+new Env('wskey转换');
 '''
 
 import socket
