@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*
 '''
-cron: */5 * * * * wskey.py
-new Env('wskey转换');
+建议cron: 1 0 * 8 *  python3 jd_qjd.py
+new Env('全民抢京豆 8.6-8.16');
 '''
 
 import socket
