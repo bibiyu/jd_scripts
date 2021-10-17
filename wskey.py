@@ -1,9 +1,9 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*
-'''
+"""
 cron: */5 * * * * python3 wskey.py
-
- new Env('wskey转换');
-'''
+new Env('wskey转换');
+"""
 
 import socket
 import base64
