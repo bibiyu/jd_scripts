@@ -697,7 +697,7 @@ function joinShop() {
     }
     $.get(options, async (err, resp, data) => {
       try {
-        // console.log(data)
+         console.log(data)
         let res = $.toObj(data);
         if(typeof res == 'object'){
           if(res.success === true){
