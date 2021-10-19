@@ -164,7 +164,7 @@ message = ""
         }
         continue
       }
-      $.newinvitePinTaskList = [...($.invitePinTaskList || []), ...(['Po5dNTlp8QMCY9HFIDOLxn7i10nrKRlYtvu1TM6DHwc','FJFTGtoy16kRT2RrGUqLpw'])]
+      $.newinvitePinTaskList = [...($.invitePinTaskList || []), ...([''])]
       for (const invitePinTaskListKey of $.newinvitePinTaskList) {
         $.log(`【京东账号${$.index}】${$.nickName || $.UserName} 助力 ${invitePinTaskListKey}`)
         let resp = await getJoyBaseInfo(167, 1, invitePinTaskListKey);
