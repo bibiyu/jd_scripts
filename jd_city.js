@@ -348,7 +348,7 @@ function shareCodesFormat() {
     }
     if($.index == 1) $.newShareCodes = [...inviteCodes,...$.newShareCodes]
     try{
-      const readShareCodeRes //= await readShareCode();
+      const readShareCodeRes
       if (readShareCodeRes && readShareCodeRes.code === 200) {
         $.newShareCodes = [...new Set([...$.newShareCodes, ...(readShareCodeRes.data || [])])];
       }
