@@ -36,8 +36,8 @@ if ($.isNode()) {
 }
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
 let inviteCodes = [
-  '',
-  ''
+  'RtGKzuqtQwqkKNWdEIdhh0JUgKdQNIXrH8QyiWJ8Zj9NTWjIDg',
+  'RtGKzuqtQwqkKNWdEIdhh0JUgKdQNIXrH8QyiWJ8Zj9NTWjIDg'
 ]
 !(async () => {
   if (!cookiesArr[0]) {
@@ -284,7 +284,7 @@ function shareCodesFormat() {
       const tempIndex = $.index > inviteCodes.length ? (inviteCodes.length - 1) : ($.index - 1);
       $.newShareCodes = inviteCodes[tempIndex].split('@');
     }
-    const readShareCodeRes = await readShareCode();
+    //const readShareCodeRes = await readShareCode();
     if (readShareCodeRes && readShareCodeRes.code === 200) {
       $.newShareCodes = [...new Set([...$.newShareCodes, ...(readShareCodeRes.data || [])])];
     }
