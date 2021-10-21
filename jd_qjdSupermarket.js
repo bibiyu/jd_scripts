@@ -93,7 +93,7 @@ async function main() {
                 }
                 else if (vo.assignmentName === "邀请好友助力") {
                     if ($.index === 1) {
-                        ownCode = 'S5KkcREoe9wXXJ0_wkPFbcQ';
+                        ownCode = '';
                         await task('smt_newFission_taskFlag', `{"taskType":"2","operateType":"1","assistId":"${ownCode}"}`)
                         if ($.canHelp) {
                             await task('smt_newFission_doAssignment', `{"projectId":"${$.projectId}","assignmentId":"${vo.assignmentId}","itemId":"${ownCode}","type":"${vo.type}"}`)
