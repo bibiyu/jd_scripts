@@ -1,5 +1,5 @@
 /*
-cron "0 */1 * * *" jd_bean_change.js
+cron "0 7-23/1 * * *" jd_bean_change.js
 */
 
 
