@@ -35,7 +35,7 @@ if ($.isNode()) {
     //authorCodeList = await getAuthorCodeList('https://gitee.com/fatelight/dongge/raw/master/dongge/lzdz2_fashion.json')
     if(authorCodeList === '404: Not Found'){
         authorCodeList = [
-            '',
+            '2d8cf949909843529e75137d2b4fce75',
         ]
     }
     for (let i = 0; i < cookiesArr.length; i++) {
