@@ -8,9 +8,9 @@
 // 如: 京东账号1的shareCode1@京东账号1的shareCode2&京东账号2的shareCode1@京东账号2的shareCode2
 let FruitShareCodes = [
    //账号一的好友shareCode,不同好友的shareCode中间用@符号隔开
-  'c466577aa1844e4b8cfc37a6ae6e4c27@944802ad8d9b42c593c81df14f53c053@bf622b6708754fe989ce817fc08c1379@fcabca3bd8ab41369fe8d221b353e91b@efc0f22ae1e346a8b880c854b77e7990',
+  '',
   //账号二的好友shareCode,不同好友的shareCode中间用@符号隔开
-  'c466577aa1844e4b8cfc37a6ae6e4c27@944802ad8d9b42c593c81df14f53c053@bf622b6708754fe989ce817fc08c1379@fcabca3bd8ab41369fe8d221b353e91b@efc0f22ae1e346a8b880c854b77e7990',
+  '',
  ]
 // 判断github action里面是否有水果互助码
 if (process.env.FRUITSHARECODES) {
@@ -24,7 +24,7 @@ if (process.env.FRUITSHARECODES) {
     FruitShareCodes = process.env.FRUITSHARECODES.split();
   }
 } else if (process.env.JD_COOKIE) {
-  console.log(`您secret里面未提供助力码，优先进行自己账号内互助，然后再给脚本内置的码进行助力，请知晓！`)
+  console.log(`由于您secret里面未提供助力码，故此处运行将会给脚本内置的码进行助力，请知晓！`)
 }
 for (let i = 0; i < FruitShareCodes.length; i++) {
   const index = (i + 1 === 1) ? '' : (i + 1);

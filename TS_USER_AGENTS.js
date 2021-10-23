@@ -1,4 +1,6 @@
-const USER_AGENTS = [
+"use strict";
+exports.__esModule = true;
+var USER_AGENTS = [
     "jdapp;android;10.0.2;10;network/wifi;Mozilla/5.0 (Linux; Android 10; ONEPLUS A5010 Build/QKQ1.191014.012; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045230 Mobile Safari/537.36",
     "jdapp;iPhone;10.0.2;14.3;network/4g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
     "jdapp;android;10.0.2;9;network/4g;Mozilla/5.0 (Linux; Android 9; Mi Note 3 Build/PKQ1.181007.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 MQQBrowser/6.2 TBS/045131 Mobile Safari/537.36",
@@ -35,17 +37,16 @@ const USER_AGENTS = [
     "jdapp;android;10.0.2;11;network/wifi;Mozilla/5.0 (Linux; Android 11; Redmi K20 Pro Premium Edition Build/RKQ1.200826.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045513 Mobile Safari/537.36",
     "jdapp;android;10.0.2;10;network/wifi;Mozilla/5.0 (Linux; Android 10; MI 8 Build/QKQ1.190828.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045227 Mobile Safari/537.36",
     "jdapp;iPhone;10.0.2;14.1;network/wifi;Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
-]
+];
 /**
  * 生成随机数字
  * @param {number} min 最小值（包含）
  * @param {number} max 最大值（不包含）
  */
-function randomNumber(min = 0, max = 100) {
+function randomNumber(min, max) {
+    if (min === void 0) { min = 0; }
+    if (max === void 0) { max = 100; }
     return Math.min(Math.floor(min + Math.random() * (max - min)), max);
 }
-const USER_AGENT = USER_AGENTS[randomNumber(0, USER_AGENTS.length)];
-
-module.exports = {
-    USER_AGENT
-}
+var USER_AGENT = USER_AGENTS[randomNumber(0, USER_AGENTS.length)];
+exports["default"] = USER_AGENT;
