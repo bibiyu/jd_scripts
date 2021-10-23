@@ -11,7 +11,7 @@
 
 第一个账号助力作者 其他依次助力CK1
 ————————————————
-入口：[ 10.23~29 大牌联合 狂欢抢先GO (https://lzdz1-isv.isvjcloud.com/dingzhi/dz/openCard/activity?activityId=dz20211023wkcn14cn5cnd0sdbs5sbx&shareUuid=koko000000000)]
+入口：[ 10.23~29 大牌联合 狂欢抢先GO (https://lzdz1-isv.isvjcloud.com/dingzhi/dz/openCard/activity?activityId=dz20211023wkcn14cn5cnd0sdbs5sbx&shareUuid=3ec1085cf0464d7eb7ba320185fd4dbb)]
 
 请求太频繁会被黑ip
 过10分钟再执行
@@ -47,9 +47,9 @@ if ($.isNode()) {
         $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', { "open-url": "https://bean.m.jd.com/bean/signIndex.action" });
         return;
     }
-    console.log(`入口：\nhttps://lzdz1-isv.isvjcloud.com/dingzhi/dz/openCard/activity?activityId=dz20211023wkcn14cn5cnd0sdbs5sbx&shareUuid=koko000000000`);
+    console.log(`入口：\nhttps://lzdz1-isv.isvjcloud.com/dingzhi/dz/openCard/activity?activityId=dz20211023wkcn14cn5cnd0sdbs5sbx&shareUuid=3ec1085cf0464d7eb7ba320185fd4dbb`);
     
-    authorCodeList = ['koko000000000']
+    authorCodeList = ['3ec1085cf0464d7eb7ba320185fd4dbb']
     
     for (let i = 0; i < cookiesArr.length; i++) {
         if (cookiesArr[i]) {
@@ -109,7 +109,7 @@ async function rush() {
         await getMyPing();
         if ($.secretPin) {
             console.log("去助力: "+$.authorCode)
-            if ($.index==1) $.authorCode = 'koko000000000'
+            if ($.index==1) $.authorCode = '3ec1085cf0464d7eb7ba320185fd4dbb'
             await task('common/accessLogWithAD', `venderId=${$.activityShopId}&code=99&pin=${encodeURIComponent($.secretPin)}&activityId=${$.activityId}&pageUrl=${$.activityUrl}&subType=app&adSource=null`, 1);
             await task('wxActionCommon/getUserInfo', `pin=${encodeURIComponent($.secretPin)}`, 1)
             if ($.index === 1) {
