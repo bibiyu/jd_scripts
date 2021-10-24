@@ -5,7 +5,7 @@ cron 10 7,21 * * * jd_jika.js
 const $ = new Env('集魔力卡召唤大奖');
 const notify = $.isNode() ? require('./sendNotify') : '';
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
-const activityKey = '';
+const activityKey = '53275a405ec3cba14b28662e05f6c53b';
 $.inviteList = [];
 let cookiesArr = [];
 if ($.isNode()) {
