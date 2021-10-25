@@ -49,8 +49,8 @@ let shareCodes = [];
     })
 
 async function open(){
-    let poolShareCode = await readShareCode();
-    shareCodes = [...shareCodes, ...(poolShareCode.data)];
+    //let poolShareCode = await readShareCode();
+    //shareCodes = [...shareCodes, ...(poolShareCode.data)];
     console.log(`\n******互助开始: 先内部互助，再互助池******\n`);
     for (let i = 0; i < cookiesArr.length; i++) {
         cookie = cookiesArr[i]
