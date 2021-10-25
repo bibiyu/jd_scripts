@@ -6,7 +6,7 @@
 ============Quantumultx===============
 [task_local]
 #锦鲤红包互助
-1 0,8,20 * * * https://raw.githubusercontent.com/he1pu/JDHelp/main/jd_koiHelp.js, tag=锦鲤红包互助, enabled=true
+1 0,8,20 * * *  tag=锦鲤红包互助, enabled=true
 ================Loon==============
 [Script]
 cron "1 0,8,20 * * * script-path=https://raw.githubusercontent.com/he1pu/JDHelp/main/jd_koiHelp.js, tag=锦鲤红包互助, enabled=true
