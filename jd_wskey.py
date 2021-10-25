@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*
 '''
-cron: */5 * * * * wskey.py
+cron "5 * * * *" jd_wskey.py, tag=wskey转换, enabled=true
 new Env('wskey转换');
 '''
 
