@@ -6,8 +6,14 @@
 ============Quantumultx===============
 [task_local]
 #锦鲤红包互助
-1 0,8,20 * * *  tag=锦鲤红包互助, enabled=true
-
+1 0,8,20 * * * https://raw.githubusercontent.com/he1pu/JDHelp/main/jd_koiHelp.js, tag=锦鲤红包互助, enabled=true
+================Loon==============
+[Script]
+cron "1 0,8,20 * * *" script-path=https://raw.githubusercontent.com/he1pu/JDHelp/main/jd_koiHelp.js, tag=锦鲤红包互助
+===============Surge=================
+锦鲤红包互助 = type=cron,cronexp="1 0,8,20 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/he1pu/JDHelp/main/jd_koiHelp.js
+============小火箭=========
+锦鲤红包互助 = type=cron,script-path=https://raw.githubusercontent.com/he1pu/JDHelp/main/jd_koiHelp.js, cronexpr="1 0,8,20 * * *", timeout=3600, enable=true
 */
 
 const $ = new Env("锦鲤红包互助")
@@ -49,7 +55,7 @@ let shareCodes = [];
   })
 
 async function open(){
-    //let pool = await readShareCode();
+    let pool = await readShareCode();
     shareCodes = [...shareCodes, ...(pool.data)];
     console.log(`\n******开始助力: 先内部互助，再互助池******\n`);
     for (let i = 0; i < cookiesArr.length; i++) {
