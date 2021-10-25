@@ -9,7 +9,7 @@
 1 0,8,20 * * * https://raw.githubusercontent.com/he1pu/JDHelp/main/jd_koiHelp.js, tag=锦鲤红包互助, enabled=true
 ================Loon==============
 [Script]
-cron "1 0,8,20 * * *" script-path=https://raw.githubusercontent.com/he1pu/JDHelp/main/jd_koiHelp.js, tag=锦鲤红包互助, enabled=true
+cron "1 0,8,20 * * * script-path=https://raw.githubusercontent.com/he1pu/JDHelp/main/jd_koiHelp.js, tag=锦鲤红包互助, enabled=true
 ===============Surge=================
 锦鲤红包互助 = type=cron,cronexp="1 0,8,20 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/he1pu/JDHelp/main/jd_koiHelp.js
 ============小火箭=========
