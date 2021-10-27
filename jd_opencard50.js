@@ -40,8 +40,8 @@ All变量适用
 
 
 */
-let guaopencard_addSku = "false"
-let guaopencard = "false"
+let guaopencard_addSku = "true"
+let guaopencard = "true"
 let guaopenwait = "0"
 let guaopencard_draw = "0"
 
