@@ -38,7 +38,7 @@ const JD_API_HOST = 'https://api.m.jd.com/client.action';
         return;
     }
 
-    for (let i = cookiesArr.length - 1; i > 0; i--) {
+	for (let i = 0; i < cookiesArr.length; i++) {
         if (cookiesArr[i]) {
             cookie = cookiesArr[i];
             $.UserName = decodeURIComponent(cookie.match(/pt_pin=([^; ]+)(?=;?)/) && cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1])
@@ -50,8 +50,13 @@ const JD_API_HOST = 'https://api.m.jd.com/client.action';
             if (status == 1) {
                 break
             }
-            await tythelp()
-            await $.wait(10000)
+
+			     await initateCoinDozer() //开团
+			     await $.wait(2000)
+			     await getCoinDozerInfo()
+			     await $.wait(10000)
+			     await tythelp()
+
         }
     }
 })()
@@ -110,6 +115,90 @@ function randomString(e) {
         n += t.charAt(Math.floor(Math.random() * a));
     return n
 }
+
+
+
+
+
+function initateCoinDozer() {
+  return new Promise(async (resolve) => {
+    let options = {
+      url: `https://api.m.jd.com/?t=1623066557140`,
+      body: `functionId=initiateCoinDozer&body={"actId":"287eb90945e049129d76dd7e85dc0313","channel":"coin_dozer","antiToken":"ec14brrjlsu8u4lhmia162581607334284f3~NmZeSyVEbFNSd3V7dldUAH92AwhlRHpTBiUjb35DFm5vLUROOBEzLUF7G28iAAFBKBgVFA1EPwIVKDclGENXbm8iVlQiAwpTTx1lKSsTCG5vfmsaDUR6LUEnG29%2BPU8LLyAADWQFNUgHcnZ4dlhZC3khBAxhUDIVBnJzf3dZC0M7LENkc0oKUwoyKhFmWzEQOTZCXQ1Eei1BKTQ5GENXbm80Qks5ATkdB28tKWoCAl8RZhtkcxY4LUF7G29rPU8eEWZHTA1EbC1BKTM5NBJXbm9oaxohDwpTWR1lf3RNWR56aAcUYUpvRD9jOm9oQwhWKTdQGmtEZgQXcWVhZgIeEHdmRQsmBSESWyAsISMVAkcvN0BeIlNlFgouLiQzFFpRI3VWUD0KdF1BImV3ZlQHXnU1UEFoADUYFCcvLCgQW0h8cgUNaVdgQVRydHl1BxpadWYbGjUVOFNZYzQ0NRkcRy59FRRzDyVTWWN2b2hDB1suZg0aaF9vSEE8%7C~1626269234856~1~20201218~eyJ2aXdlIjoiMCIsImJhaW4iOnsiaWMiOiIwIiwibGUiOiI3NSIsImN0IjoiaSIsImR0IjoiMiJ9fQ%3D%3D~2~472~tix5%7Cgw57a%3B554ci-6n%2C81%2C%2C%3B751r-%2C%2C%2C%3B358-6o%2C81%2C3t%2Cj%3Bb53-6o%2C81%2C3t%2Cj%3B050-6o%2C81%2C3t%2Cj%3Bdoei%3A%2C1%2C186%2C186%2C0%2C0%2C9%2C22%2C3%2C15%3Bdmei%3A%2C1%2C302%2C0%2C-2%2C0%2C-2%2C0%2C-2%2C0%3Bemc%3A%2C5%3A1%3Bemmm%3A%3Bemcf%3A%2C5%3A1%3Bivli%3A%3Biivl%3A%3Bivcvj%3A%3Bscvje%3A%3Bewhi%3A%2C5%3A187-46%3B1626269222397%2C1626269234855%2C0%2C1%2C6%2C6%2C0%2C1%2C0%2C0%2C0%3Ba3bp","referer":"-1","frontendInitStatus":"s"}&appid=megatron&client=android&clientVersion=9&t=1626269234860&networkType=wifi&eid=eidAecfa8121c7s1QgSzJyiJRFuXovji/QEn20IEtJ8WEfBsxVlLBBlDx1NDeWXp7i+1qklWZQtVP/M+tndxJj/uR/SSHj2G7vN0F2lfP0e9ux8UHlNC&fp=-1&frontendInitStatus=s&uuid=8363532363230343238303836333-43D2468336563316936636265356&osVersion=9&d_brand=Xiaomi&d_model=MI 8&agent=-1&pageClickKey=-1&screen=393*818&platform=3&lang=zh_CN&eu=8363532363230343238303836333&fv=43D2468336563316936636265356`,
+      headers: {
+        "Origin": "https://pushgold.jd.com",
+        "Host": "api.m.jd.com",
+        "User-Agent": "jdltapp;iPhone;3.3.6;14.3;75aeceef3046d8ce11d354ff89af9517a2e4aa18;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone9,2;addressid/4585826605;hasOCPay/0;appBuild/1060;supportBestPay/0;pv/53.31;apprpd/;ref/https://invite-reward.jd.com/?lng=106.286950&lat=29.969353&sid=547255867e847394aedfb6d68c3e50fw&un_area=4_48201_54794_0#/invitee?inviterId=dS%2Bp85VyjydPuAOOnFP%2Faw%3D%3D;psq/0;ads/;psn/75aeceef3046d8ce11d354ff89af9517a2e4aa18|89;jdv/0|kong|t_1001003207_1762319_6901310|jingfen|30578707801140d09fcd54e5cd83bbf7|1621510932517|1621511027;adk/;app_device/IOS;pap/JA2020_3112531|3.3.6|IOS 14.3;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+        "Cookie": cookie,
+      }
+    }
+    $.post(options, async (err, resp, data) => {
+      try {
+        if (err) {
+          console.log(`${JSON.stringify(err)}`)
+          console.log(`initateCoinDozer API请求失败，请检查网路重试`)
+        } else {
+          data = JSON.parse(data);
+          if (!data.success && data.code === 508) {
+            console.log(data.msg)
+            $.canRun = false
+          } else {
+            console.log(`【京东账号${$.index}】推一推开团成功\n`)
+          }
+        }
+      } catch (e) {
+        $.logErr(e, resp);
+      } finally {
+        resolve();
+      }
+    });
+  });
+}
+
+
+function getCoinDozerInfo() {
+  return new Promise(async (resolve) => {
+    let options = {
+      url: `https://api.m.jd.com/?t=1623066557140`,
+      body: `functionId=getCoinDozerInfo&body={"actId":"287eb90945e049129d76dd7e85dc0313","channel":"coin_dozer","antiToken":"","referer":"-1","frontendInitStatus":""}&appid=megatron&client=android&clientVersion=9&t=1626269713293&networkType=4g&eid=&fp=&frontendInitStatus=&uuid=8363532363230343238303836333-43D2468336563316936636265356&osVersion=9&d_brand=&d_model=&agent=-1&pageClickKey=-1&screen=393*818&platform=3&lang=zh_CN&eu=8363532363230343238303836333&fv=43D2468336563316936636265356`,
+      headers: {
+        "Origin": "https://pushgold.jd.com",
+        "Host": "api.m.jd.com",
+        "User-Agent": "jdltapp;iPhone;3.3.6;14.3;75aeceef3046d8ce11d354ff89af9517a2e4aa18;network/wifi;hasUPPay/0;pushNoticeIsOpen/0;lang/zh_CN;model/iPhone9,2;addressid/4585826605;hasOCPay/0;appBuild/1060;supportBestPay/0;pv/53.31;apprpd/;ref/https://invite-reward.jd.com/?lng=106.286950&lat=29.969353&sid=547255867e847394aedfb6d68c3e50fw&un_area=4_48201_54794_0#/invitee?inviterId=dS%2Bp85VyjydPuAOOnFP%2Faw%3D%3D;psq/0;ads/;psn/75aeceef3046d8ce11d354ff89af9517a2e4aa18|89;jdv/0|kong|t_1001003207_1762319_6901310|jingfen|30578707801140d09fcd54e5cd83bbf7|1621510932517|1621511027;adk/;app_device/IOS;pap/JA2020_3112531|3.3.6|IOS 14.3;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
+        "Cookie": cookie,
+      }
+    }
+    $.post(options, async (err, resp, data) => {
+      try {
+        if (err) {
+          console.log(`${JSON.stringify(err)}`)
+          console.log(`API请求失败，请检查网路重试`)
+        } else {
+          data = JSON.parse(data);
+          if (data.code == 0 && data.data.sponsorActivityInfo.packetId) {
+            console.log(`【京东账号${$.index}的推一推邀请码】${data.data.sponsorActivityInfo.packetId}\n`)
+    if ($.index == 1) {
+        tytpacketId = data.data.sponsorActivityInfo.packetId
+      }
+            packetId = data.data.sponsorActivityInfo.packetId
+          } else {
+            console.log(`【京东账号${$.index}】获取助力码失败\n`)
+            console.log(JSON.stringify(data))
+          }
+        }
+      } catch (e) {
+        $.logErr(e, resp);
+      } finally {
+        resolve();
+      }
+    });
+  });
+}
+
+
+
+
+
 
 async function taskPostUrl(functionId, body) {
     return {
