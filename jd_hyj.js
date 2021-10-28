@@ -51,7 +51,7 @@ const JD_API_HOST = 'https://api.m.jd.com/client.action';
 
                 do {
                     var conti = false
-                    await travel_collectAtuoScore()
+                    //await travel_collectAtuoScore()
                     res = await travel_getTaskDetail()
                     if (!res || res.inviteId == null) {
                         continue;
@@ -65,79 +65,7 @@ const JD_API_HOST = 'https://api.m.jd.com/client.action';
                     }
                     let task = []
                     let r = []
-                    for (var p = 0; p < res.taskVos.length; p++) {
-                        task = res.taskVos[p]
-                        if (task.status != 1) continue
-                        switch (task.taskType) {
-                            case 7:
-                            case 9:
-                            case 3:
-                            case 6:
-                            case 26:
-                                var tmp = []
-                                if (task.taskType == 7) {
-                                    tmp = task.browseShopVo
-                                } else {
-                                    tmp = task.shoppingActivityVos
-                                }
-
-                                for (var o = 0; o < tmp.length; o++) {
-                                    console.log(`${tmp[o].title?tmp[o].title:tmp[o].shopName}`)
-                                    if (tmp[o].status == 1) {
-                                        conti = true
-                                        await travel_collectScore(tmp[o].taskToken, task.taskId)
-                                    }
-
-                                }
-                                await $.wait(8000)
-                                for (var o = 0; o < tmp.length; o++) {
-                                    if (tmp[o].status == 1) {
-                                        conti = true
-                                        await qryViewkitCallbackResult(tmp[o].taskToken)
-                                    }
-
-                                }
-                                break
-                            case 2:
-                                r = await travel_getFeedDetail(task.taskId)
-                                var t = 0;
-                                for (var o = 0; o < r.productInfoVos.length; o++) {
-                                    if (r.productInfoVos[o].status == 1) {
-                                        conti = true
-                                        await travel_collectScore(r.productInfoVos[o].taskToken, task.taskId)
-                                        t++
-                                        if (t >= 5) break
-                                    }
-
-                                }
-                                break
-                            case 5:
-                                r = await travel_getFeedDetail2(task.taskId)
-                                var t = 0;
-                                for (var o = 0; o < r.browseShopVo.length; o++) {
-                                    if (r.browseShopVo[o].status == 1) {
-                                        conti = true
-                                        await travel_collectScore(r.browseShopVo[o].taskToken, task.taskId)
-                                        t++
-                                        if (t >= 5) break
-                                    }
-
-                                }
-                                break
-                            case 21:
-                                for (var o = 0; o < task.brandMemberVos.length; o++) {
-                                    if (task.brandMemberVos[o].status == 1) {
-                                        console.log(`${task.brandMemberVos[o].title}`)
-                                        memberUrl = task.brandMemberVos[o].memberUrl
-                                        memberUrl = transform(memberUrl)
-                                        await join(task.brandMemberVos[o].vendorIds, memberUrl.channel, memberUrl.shopId ? memberUrl.shopId : "")
-                                        await travel_collectScore(task.brandMemberVos[o].taskToken, task.taskId)
-                                    }
-
-                                }
-                        }
-
-                    }
+                    
                     await $.wait(1000)
                 } while (conti)
 
@@ -497,7 +425,7 @@ function travel_getFeedDetail2(taskId) {
 }
 
 async function toHelp() {
-  let codes = await readShareCode('hyj');
+  //let codes = await readShareCode('hyj');
   inviteIds = [...inviteIds, ...(codes.data)];
   for (let i = 0; i < cookiesArr.length; i++) {
     if (cookiesArr[i]) {
@@ -551,7 +479,7 @@ function help(inId) {
 }
 
 async function toHelpPk() {
-  let pkCodes = await readShareCode('hyjpk');
+  //let pkCodes = await readShareCode('hyjpk');
   let pkPool = pkCodes.data || [];
   console.log(`\n+++++++ 组队：内部组CK1 +++++++`)
   for (let i = 0; i < cookiesArr.length; i++) {
