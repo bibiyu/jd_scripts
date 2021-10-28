@@ -36,54 +36,10 @@ const JD_API_HOST = 'https://api.m.jd.com/client.action';
             await getUA()
         }
     }
-    for (let i = 0; i < cookiesArr.length; i++) {
-        if (cookiesArr[i]) {
-            cookie = cookiesArr[i];
-            $.UserName = decodeURIComponent(cookie.match(/pt_pin=([^; ]+)(?=;?)/) && cookie.match(/pt_pin=([^; ]+)(?=;?)/)[1])
-            $.index = i + 1;
-            $.isLogin = true;
-            $.nickName = '';
-            message = '';
-            console.log(`\n******开始【京东账号${$.index}】${$.nickName || $.UserName}*********\n`);
-            
-            try {
-                await get_secretp()
-
-                do {
-                    var conti = false
-                    //await travel_collectAtuoScore()
-                    res = await travel_getTaskDetail()
-                    if (!res || res.inviteId == null) {
-                        continue;
-                    }
-
-                    for (var p = 0; p < res.lotteryTaskVos[0].badgeAwardVos.length; p++) {
-                        if (res.lotteryTaskVos[0].badgeAwardVos[p].status == 3) {
-                            await travel_getBadgeAward(res.lotteryTaskVos[0].badgeAwardVos[p].awardToken)
-                        }
-
-                    }
-                    let task = []
-                    let r = []
-                    
-                    await $.wait(1000)
-                } while (conti)
-
-
-                await travel_sign()
-                do {
-                    var ret = await travel_raise()
-                } while (ret)
-                console.log(`助力码：${res.inviteId}\n`)
-
-            } catch (e) {
-                $.log('', `❌ ${$.name}, 失败! 原因: ${e}!`, '')
-            }
-            await getPkInviteIds();
-            await $.wait(2000);
-        }
-    }
-    await toHelp();
+    await getPkInviteIds();
+    //await $.wait(2000);
+    //await toHelp();
+    await $.wait(2000);
     await toHelpPk();
 })()
 .catch((e) => {
@@ -425,7 +381,7 @@ function travel_getFeedDetail2(taskId) {
 }
 
 async function toHelp() {
-  //let codes = await readShareCode('hyj');
+  let codes = await readShareCode('hyj');
   inviteIds = [...inviteIds, ...(codes.data)];
   for (let i = 0; i < cookiesArr.length; i++) {
     if (cookiesArr[i]) {
@@ -479,7 +435,7 @@ function help(inId) {
 }
 
 async function toHelpPk() {
-  //let pkCodes = await readShareCode('hyjpk');
+  let pkCodes = await readShareCode('hyjpk');
   let pkPool = pkCodes.data || [];
   console.log(`\n+++++++ 组队：内部组CK1 +++++++`)
   for (let i = 0; i < cookiesArr.length; i++) {
@@ -551,9 +507,7 @@ function getPkInviteIds() {
                 if (cookiesArr.length>1 && $.index==1) {
                   $.pkInviteId = data.data.result.groupInfo.groupJoinInviteId;
                 }
-                if (cookiesArr.length < 5 && $.index==1) {
-                  await submitCode(data.data.result.groupInfo.groupJoinInviteId, 'hyjpk');
-                }
+                await submitCode(data.data.result.groupInfo.groupJoinInviteId, 'hyjpk');
               }else {
                 console.log(`获取组队邀请码: 失败`);
               }
