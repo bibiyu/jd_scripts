@@ -1,7 +1,7 @@
 /*
 跨界宠粉  豪礼放送
 2021年10月31日 - 2021年11月13日
-https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity/5063373?activityId=llk20211031b&shareUuid=2638499a2a0340178a217b32705faa5a
+https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity/5063373?activityId=llk20211031b&shareUuid=09e4bc3477b94d99897b72af6f3a10b6
 
 cron 17 0,20 * * * https://raw.githubusercontent.com/KingRan/JDJB/main/jd_opencard9.js
 */
@@ -34,7 +34,7 @@ if ($.isNode()) {
     authorCodeList = await getAuthorCodeList('https://gitee.com/KingRan521/JD-Scripts/raw/master/shareCodes/opencard9.json')
     if(authorCodeList === '404: Not Found'){
         authorCodeList = [
-            '2638499a2a0340178a217b32705faa5a',
+            '09e4bc3477b94d99897b72af6f3a10b6',
         ]
     }
     // console.log(authorCodeList)
