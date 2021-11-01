@@ -1,6 +1,6 @@
 
 /**
- * name: 京东-双11星推官
+ * name: 京东-双11星推官1
  * author: @lof
  */
 const $ = new Env("✨双11星推官");
