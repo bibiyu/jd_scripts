@@ -28,7 +28,7 @@ guaopenwait59="0"
 
 All变量适用
 ————————————————
-入口：[11.1~11.13 酒水会员盛典 (https://lzdz2-isv.isvjcloud.com/dingzhi/jddrinks/grandceremony/activity?activityId=dz2110100000358301&shareUuid=e35b30db8313460a914e35352802817c)]
+入口：[11.1~11.13 酒水会员盛典 (https://lzdz2-isv.isvjcloud.com/dingzhi/jddrinks/grandceremony/activity?activityId=dz2110100000358301&shareUuid=e6e16523f0d74d73ab813e929da39dac)]
 
 ============Quantumultx===============
 [task_local]
@@ -99,7 +99,7 @@ message = ""
   $.outFlag = false
   $.activityEnd = false
   $.shareUuidArr = [];
-  $.shareUuid = 'e35b30db8313460a914e35352802817c'
+  $.shareUuid = 'e6e16523f0d74d73ab813e929da39dac'
   $.activityId = 'dz2110100000358301'
   console.log(`入口:\nhttps://lzdz2-isv.isvjcloud.com/dingzhi/jddrinks/grandceremony/activity?activityId=${$.activityId}&shareUuid=${$.shareUuid}`)
   for (let i = 0; i < cookiesArr.length; i++) {
@@ -259,7 +259,7 @@ async function run(){
       console.log('账号1获取不到[shareUuid]退出执行，请重新执行')
       return
     }
-    if($.index === 1 || $.shareUuid == 'e35b30db8313460a914e35352802817c') updateShareUuid($.shareUuid,0)
+    if($.index === 1 || $.shareUuid == 'e6e16523f0d74d73ab813e929da39dac') updateShareUuid($.shareUuid,0)
     if((!$.info.followShop || !checkOpenCardData.allOpenCard) && $.index !== 1) updateShareUuid($.shareUuid,1)
     await $.wait(parseInt(Math.random() * 1000 + 10000, 10))
     if(guaopenwait){

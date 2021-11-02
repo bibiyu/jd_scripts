@@ -14,7 +14,7 @@
 ck1满10人自动换ck2
 
 ————————————————
-入口：[11.1~11.13 酒水会员盛典 (https://lzdz2-isv.isvjcloud.com/dingzhi/jddrinks/grandceremony/activity?activityId=dz2110100000358301&shareUuid=c5e12cb2ac264233ae50b098040fa217)]
+入口：[11.1~11.13 酒水会员盛典 (https://lzdz2-isv.isvjcloud.com/dingzhi/jddrinks/grandceremony/activity?activityId=dz2110100000358301&shareUuid=e6e16523f0d74d73ab813e929da39dac)]
 
 ============Quantumultx===============
 [task_local]
@@ -51,7 +51,7 @@ message = ""
   $.outFlag = false
   $.activityEnd = false
   $.shareUuidArr = [];
-  $.shareUuid = 'c5e12cb2ac264233ae50b098040fa217'
+  $.shareUuid = 'e6e16523f0d74d73ab813e929da39dac'
   $.activityId = 'dz2110100000358301'
   console.log(`入口:\nhttps://lzdz2-isv.isvjcloud.com/dingzhi/jddrinks/grandceremony/activity?activityId=${$.activityId}&shareUuid=${$.shareUuid}`)
   for (let i = 0; i < cookiesArr.length; i++) {
