@@ -1,5 +1,5 @@
 /*
-10.31~11.13 跨界宠粉  豪礼放送 [gua_opencard54.js]
+10.31~11.13 跨界宠粉  豪礼放送 [gua_opencard56.js]
 新增开卡脚本
 一次性脚本
 
@@ -8,11 +8,11 @@
   抽奖可能获得5/666京豆
 3.关注5豆 
 4.加购0京豆 1次游戏机会
-  (默认不加购 如需加购请设置环境变量[guaopencard_addSku54]为"true"
+  (默认不加购 如需加购请设置环境变量[guaopencard_addSku56]为"true"
 5.浏览商品0豆 2次游戏机会
-6.抽奖 (默认不抽奖 如需抽奖请设置环境变量[guaopencard_draw54]为"3"
+6.抽奖 (默认不抽奖 如需抽奖请设置环境变量[guaopencard_draw56]为"3"
 填写要抽奖的次数 不足已自身次数为准
-guaopencard_draw54="3"
+guaopencard_draw56="3"
 填非数字会全都抽奖
 
 第一个账号助力作者 其他依次助力CK1
@@ -20,15 +20,15 @@ guaopencard_draw54="3"
 
 默认脚本不执行
 如需执行脚本请设置环境变量
-guaopencard54="true"
+guaopencard56="true"
 每个账号之间延迟 100=延迟100秒 0=延迟0秒会使用每3个账号延迟60秒
 guaopenwait_All 所有
-guaopenwait54="0"
+guaopenwait56="0"
 
 
 All变量适用
 ————————————————
-入口：[ 10.31~11.13 跨界宠粉  豪礼放送 (https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=llk20211031b&shareUuid=e5ddf74480834d6cae63ca1a81fd4f4f)]
+入口：[ 10.31~11.13 跨界宠粉  豪礼放送 (https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=llk20211031a&shareUuid=2f4af0fa472040cca1edd5887bc895bd)]
 
 请求太频繁会被黑ip
 过10分钟再执行
@@ -36,7 +36,7 @@ All变量适用
 ============Quantumultx===============
 [task_local]
 #10.31~11.13 跨界宠粉  豪礼放送
-47 5 1-13 10 * https://raw.githubusercontent.com/smiek2121/scripts/master/gua_opencard54.js, tag=10.31~11.13 跨界宠粉  豪礼放送, enabled=true
+47 7 1-13 10 * https://raw.githubusercontent.com/smiek2121/scripts/master/gua_opencard56.js, tag=10.31~11.13 跨界宠粉  豪礼放送, enabled=true
 
 */
 let guaopencard_addSku = "false"
@@ -70,14 +70,14 @@ if ($.isNode()) {
   cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
 
-guaopencard_addSku = $.isNode() ? (process.env.guaopencard_addSku54 ? process.env.guaopencard_addSku54 : `${guaopencard_addSku}`) : ($.getdata('guaopencard_addSku54') ? $.getdata('guaopencard_addSku54') : `${guaopencard_addSku}`);
+guaopencard_addSku = $.isNode() ? (process.env.guaopencard_addSku56 ? process.env.guaopencard_addSku56 : `${guaopencard_addSku}`) : ($.getdata('guaopencard_addSku56') ? $.getdata('guaopencard_addSku56') : `${guaopencard_addSku}`);
 guaopencard_addSku = $.isNode() ? (process.env.guaopencard_addSku_All ? process.env.guaopencard_addSku_All : `${guaopencard_addSku}`) : ($.getdata('guaopencard_addSku_All') ? $.getdata('guaopencard_addSku_All') : `${guaopencard_addSku}`);
-guaopencard = $.isNode() ? (process.env.guaopencard54 ? process.env.guaopencard54 : `${guaopencard}`) : ($.getdata('guaopencard54') ? $.getdata('guaopencard54') : `${guaopencard}`);
+guaopencard = $.isNode() ? (process.env.guaopencard56 ? process.env.guaopencard56 : `${guaopencard}`) : ($.getdata('guaopencard56') ? $.getdata('guaopencard56') : `${guaopencard}`);
 guaopencard = $.isNode() ? (process.env.guaopencard_All ? process.env.guaopencard_All : `${guaopencard}`) : ($.getdata('guaopencard_All') ? $.getdata('guaopencard_All') : `${guaopencard}`);
-guaopenwait = $.isNode() ? (process.env.guaopenwait54 ? process.env.guaopenwait54 : `${guaopenwait}`) : ($.getdata('guaopenwait54') ? $.getdata('guaopenwait54') : `${guaopenwait}`);
+guaopenwait = $.isNode() ? (process.env.guaopenwait56 ? process.env.guaopenwait56 : `${guaopenwait}`) : ($.getdata('guaopenwait56') ? $.getdata('guaopenwait56') : `${guaopenwait}`);
 guaopenwait = $.isNode() ? (process.env.guaopenwait_All ? process.env.guaopenwait_All : `${guaopenwait}`) : ($.getdata('guaopenwait_All') ? $.getdata('guaopenwait_All') : `${guaopenwait}`);
 guaopenwait = parseInt(guaopenwait, 10) || 0
-guaopencard_draw = $.isNode() ? (process.env.guaopencard_draw54 ? process.env.guaopencard_draw54 : guaopencard_draw) : ($.getdata('guaopencard_draw54') ? $.getdata('guaopencard_draw54') : guaopencard_draw);
+guaopencard_draw = $.isNode() ? (process.env.guaopencard_draw56 ? process.env.guaopencard_draw56 : guaopencard_draw) : ($.getdata('guaopencard_draw56') ? $.getdata('guaopencard_draw56') : guaopencard_draw);
 guaopencard_draw = $.isNode() ? (process.env.guaopencard_draw ? process.env.guaopencard_draw : guaopencard_draw) : ($.getdata('guaopencard_draw') ? $.getdata('guaopencard_draw') : guaopencard_draw);
 allMessage = ""
 message = ""
@@ -89,7 +89,7 @@ let activityCookie =''
 !(async () => {
   if ($.isNode()) {
     if(guaopencard+"" != "true"){
-      console.log('如需执行脚本请设置环境变量[guaopencard54]为"true"')
+      console.log('如需执行脚本请设置环境变量[guaopencard56]为"true"')
     }
     if(guaopencard+"" != "true"){
       return
@@ -101,8 +101,8 @@ let activityCookie =''
     });
     return;
   }
-  $.activityId = "llk20211031b"
-  $.shareUuid = "e5ddf74480834d6cae63ca1a81fd4f4f"
+  $.activityId = "llk20211031a"
+  $.shareUuid = "2f4af0fa472040cca1edd5887bc895bd"
   console.log(`入口:\nhttps://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${$.shareUuid}`)
   for (let i = 0; i < cookiesArr.length; i++) {
     cookie = cookiesArr[i];
@@ -235,7 +235,7 @@ async function run() {
           await cleanCart.clean(cookie,'https://jd.smiek.tk/jdcleancatr_21102717',goodsArr || [ ])
         }
       }else{
-        console.log('如需加购请设置环境变量[guaopencard_addSku54]为"true"');
+        console.log('如需加购请设置环境变量[guaopencard_addSku56]为"true"');
       }
     }
     $.runFalag = true
@@ -268,7 +268,7 @@ async function run() {
         }
         await $.wait(parseInt(Math.random() * 2000 + 2000, 10))
       }
-    }else console.log('如需抽奖请设置环境变量[guaopencard_draw54]为"3" 3为次数');
+    }else console.log('如需抽奖请设置环境变量[guaopencard_draw56]为"3" 3为次数');
     if(flag){
       await takePostRequest('activityContent');
     }
@@ -290,7 +290,7 @@ async function run() {
         }
         await $.wait(parseInt(Math.random() * 2000 + 2000, 10))
       }
-    }else console.log('如需抽奖请设置环境变量[guaopencard_draw54]为"3" 3为次数');
+    }else console.log('如需抽奖请设置环境变量[guaopencard_draw56]为"3" 3为次数');
     
     await $.wait(parseInt(Math.random() * 1000 + 2000, 10))
     await takePostRequest('getDrawRecordHasCoupon');
@@ -330,7 +330,7 @@ async function takePostRequest(type) {
   switch (type) {
     case 'isvObfuscator':
       url = `https://api.m.jd.com/client.action?functionId=isvObfuscator`;
-      body = `body=%7B%22url%22%3A%22https%3A//lzdz1-isv.isvjcloud.com%22%2C%22id%22%3A%22%22%7D&uuid=f68594bd84ce00a89cb53f9436300defecedbdb0&client=apple&clientVersion=10.1.4&st=1633922764639&sv=111&sign=faf2058f54e8e60ecc55f3e00635c86b`;
+      body = `body=%7B%22url%22%3A%22https%3A//lzdz1-isv.isvjcloud.com%22%2C%22id%22%3A%22%22%7D&uuid=7088d9018515b8cb0c88ace6e5479762af3e88f3&client=apple&clientVersion=10.1.4&st=1634343624086&sv=120&sign=8b9cea22c3a0d77026abda5d37d2b7e3`;
       break;
       case 'getSimpleActInfoVo':
         url = `${domain}/dz/common/getSimpleActInfoVo`;
@@ -338,12 +338,12 @@ async function takePostRequest(type) {
         break;
       case 'getMyPing':
         url = `${domain}/customer/getMyPing`;
-        body = `userId=${$.shopId || $.venderId || '1000001195'}&token=${$.Token}&fromType=APP`;
+        body = `userId=${$.shopId || $.venderId || ''}&token=${$.Token}&fromType=APP`;
         break;
       case 'accessLogWithAD':
         url = `${domain}/common/accessLogWithAD`;
         let pageurl = `${domain}/drawCenter/activity?activityId=${$.activityId}&shareUuid=${$.shareUuid}`
-        body = `venderId=${$.shopId || $.venderId || '1000001195'}&code=99&pin=${encodeURIComponent($.Pin)}&activityId=${$.activityId}&pageUrl=${encodeURIComponent(pageurl)}&subType=app&adSource=`
+        body = `venderId=${$.shopId || $.venderId || ''}&code=99&pin=${encodeURIComponent($.Pin)}&activityId=${$.activityId}&pageUrl=${encodeURIComponent(pageurl)}&subType=app&adSource=`
         break;
       case 'getUserInfo':
         url = `${domain}/wxActionCommon/getUserInfo`;
