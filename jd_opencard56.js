@@ -28,7 +28,7 @@ guaopenwait56="0"
 
 All变量适用
 ————————————————
-入口：[ 10.31~11.13 跨界宠粉  豪礼放送 (https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=llk20211031a&shareUuid=2f4af0fa472040cca1edd5887bc895bd)]
+入口：[ 10.31~11.13 跨界宠粉  豪礼放送 (https://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=llk20211031a&shareUuid=bdd06308e7684873915d98190d26893b)]
 
 请求太频繁会被黑ip
 过10分钟再执行
@@ -102,7 +102,7 @@ let activityCookie =''
     return;
   }
   $.activityId = "llk20211031a"
-  $.shareUuid = "2f4af0fa472040cca1edd5887bc895bd"
+  $.shareUuid = "bdd06308e7684873915d98190d26893b"
   console.log(`入口:\nhttps://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${$.shareUuid}`)
   for (let i = 0; i < cookiesArr.length; i++) {
     cookie = cookiesArr[i];
