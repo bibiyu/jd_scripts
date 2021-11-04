@@ -9,7 +9,7 @@
 
 第一个账号助力作者 其他依次助力CK1
 ————————————————
-入口：[ 11.4~11.11 大牌联合 赢大额京豆 (https://lzdz1-isv.isvjcloud.com/dingzhi/shop/league/activity/6758593?activityId=dz211104100001616201shop&shareUuid=befa3df8d4ef47be85fa4e1b3424ff51)]
+入口：[ 11.4~11.11 大牌联合 赢大额京豆 (https://lzdz1-isv.isvjcloud.com/dingzhi/shop/league/activity/6758593?activityId=dz211104100001616201shop&shareUuid=626b2cf09e534f52bce1cbabdc59b4d1)]
 请求太频繁会被黑ip
 过10分钟再执行
 ============Quantumultx===============
@@ -42,8 +42,8 @@ if ($.isNode()) {
         $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', { "open-url": "https://bean.m.jd.com/bean/signIndex.action" });
         return;
     }
-    console.log(`入口:\nhttps://lzdz1-isv.isvjcloud.com/dingzhi/shop/league/activity/6758593?activityId=dz211104100001616201shop&shareUuid=befa3df8d4ef47be85fa4e1b3424ff51`)
-    let authorCodeList = ['befa3df8d4ef47be85fa4e1b3424ff51']
+    console.log(`入口:\nhttps://lzdz1-isv.isvjcloud.com/dingzhi/shop/league/activity/6758593?activityId=dz211104100001616201shop&shareUuid=626b2cf09e534f52bce1cbabdc59b4d1`)
+    let authorCodeList = ['626b2cf09e534f52bce1cbabdc59b4d1']
     for (let i = 0; i < cookiesArr.length; i++) {
         if (cookiesArr[i]) {
             cookie = cookiesArr[i]
