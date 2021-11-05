@@ -46,7 +46,7 @@ let nowTime = new Date().getTime() + new Date().getTimezoneOffset()*60*1000 + 8*
         if ($.isNode()) await notify.sendNotify($.name + '活动已结束', ``);
         return
     }
-    $.shareCode = 'OjSOv'
+    $.shareCode = 'lRywi'
     for (let i = 0; i < cookiesArr.length; i++) {
         cookie = cookiesArr[i];
         if (cookie) {

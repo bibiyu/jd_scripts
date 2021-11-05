@@ -3,7 +3,7 @@ Phone狂制噪吧 [jd_phone.js]
 
 第一个账号助力作者 其他依次助力CK1
 ————————————————
-入口：[ Phone狂制噪吧 (https://lzdz1-isv.isvjd.com/dingzhi/vivo/iqoojieyapa/activity/131545?activityId=dz2110100000406501&shareUuid=df6902838eb44de2bffc61dbc7afa610)]
+入口：[ Phone狂制噪吧 (https://lzdz1-isv.isvjd.com/dingzhi/vivo/iqoojieyapa/activity/131545?activityId=dz2110100000406501&shareUuid=ff36fdfd8ab046a28939c848a0c787a1)]
 请求太频繁会被黑ip
 过10分钟再执行
 ============Quantumultx===============
@@ -35,7 +35,7 @@ if ($.isNode()) {
         $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', { "open-url": "https://bean.m.jd.com/bean/signIndex.action" });
         return;
     }
-    console.log(`入口:\nhttps://lzdz1-isv.isvjd.com/dingzhi/vivo/iqoojieyapa/activity/131545?activityId=dz2110100000406501&shareUuid=df6902838eb44de2bffc61dbc7afa610`)
+    console.log(`入口:\nhttps://lzdz1-isv.isvjd.com/dingzhi/vivo/iqoojieyapa/activity/131545?activityId=dz2110100000406501&shareUuid=ff36fdfd8ab046a28939c848a0c787a1`)
     for (let i = 0; i < cookiesArr.length; i++) {
         if (cookiesArr[i]) {
             cookie = cookiesArr[i]
@@ -50,7 +50,7 @@ if ($.isNode()) {
             if (!$.isLogin) {
                 continue
             }
-            authorCodeList = ['df6902838eb44de2bffc61dbc7afa610']
+            authorCodeList = ['ff36fdfd8ab046a28939c848a0c787a1']
             $.bean = 0;
             $.authorCode = ownCode ? ownCode : authorCodeList[random(0, authorCodeList.length)]
             $.authorNum = `${random(1000000, 9999999)}`
