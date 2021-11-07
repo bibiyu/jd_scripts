@@ -2,7 +2,7 @@
 双十一无门槛红包🧧
 ck1助力 作者
 其余助力ck1
-https://u.jd.com/yI2EGVm
+https://u.jd.com/k30Fp
 跳转到app 可查看助力情况
 0 0,10,20,22 * * * gua_RedEnvelope.js
 */
@@ -57,9 +57,9 @@ let nowTime = new Date().getTime() + new Date().getTimezoneOffset()*60*1000 + 8*
     }
   }
   if(message){
-    $.msg($.name, ``, `${message}\nhttps://u.jd.com/yI2EGVm\n\n跳转到app 可查看助力情况`);
+    $.msg($.name, ``, `${message}\nhttps://u.jd.com/k30Fp\n\n跳转到app 可查看助力情况`);
     if ($.isNode()){
-      await notify.sendNotify(`${$.name}`, `${message}\n\nhttps://u.jd.com/yI2EGVm\n跳转到app 可查看助力情况`);
+      await notify.sendNotify(`${$.name}`, `${message}\n\nhttps://u.jd.com/k30Fp\n跳转到app 可查看助力情况`);
     }
   }
 })()
@@ -317,11 +317,11 @@ function getEid(arr) {
 
 function getUA(){
   $.UA = `jdapp;iPhone;10.2.0;13.1.2;${randomString(40)};M/5.0;network/wifi;ADID/;model/iPhone8,1;addressid/2308460611;appBuild/167853;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;`
-  rebateCode = 'yI2EGVm'
+  rebateCode = 'k30Fp'
   if($.index != 1){
-    let arr = [rebateCodes,'yI2EGVm']
+    let arr = [rebateCodes,'k30Fp']
     rebateCode = arr[Math.floor(Math.random() * arr.length)] || rebateCode
-    if(!rebateCode) rebateCode = 'yI2EGVm'
+    if(!rebateCode) rebateCode = 'k30Fp'
   }
   console.log(rebateCode)
 }
