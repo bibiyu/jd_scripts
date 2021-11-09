@@ -13,7 +13,7 @@
 第一个账号助力作者 其他依次助力CK1
 
 ————————————————
-入口：[ 11.9~11.17 大牌联合 11.11狂欢购 (https://lzdz1-isv.isvjcloud.com/dingzhi/dz/openCard/activity/8743676?activityId=8tbv4uc5g8lb34g1orei354wwky1109&shareUuid=3fc14d3702f24a849bfd89020a1289ad)]
+入口：[ 11.9~11.17 大牌联合 11.11狂欢购 (https://lzdz1-isv.isvjcloud.com/dingzhi/dz/openCard/activity/8743676?activityId=8tbv4uc5g8lb34g1orei354wwky1109&shareUuid=a4a24493273b415dbeecdd63c84d43ec)]
 
 请求太频繁会被黑ip
 过10分钟再执行
@@ -53,8 +53,8 @@ if (process.env.NO_RUSH && process.env.NO_RUSH != "") {
         $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', { "open-url": "https://bean.m.jd.com/bean/signIndex.action" });
         return;
     }
-    console.log(`入口:\nhttps://lzdz1-isv.isvjcloud.com/dingzhi/dz/openCard/activity/8743676?activityId=8tbv4uc5g8lb34g1orei354wwky1109&shareUuid=3fc14d3702f24a849bfd89020a1289ad`)
-    let authorCodeList = ['3fc14d3702f24a849bfd89020a1289ad'];
+    console.log(`入口:\nhttps://lzdz1-isv.isvjcloud.com/dingzhi/dz/openCard/activity/8743676?activityId=8tbv4uc5g8lb34g1orei354wwky1109&shareUuid=a4a24493273b415dbeecdd63c84d43ec`)
+    let authorCodeList = ['a4a24493273b415dbeecdd63c84d43ec'];
     for (let i = 0; i < cookiesArr.length; i++) {
         if (cookiesArr[i]) {
             cookie = cookiesArr[i]
