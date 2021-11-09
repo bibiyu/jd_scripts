@@ -5,6 +5,10 @@
 # 环境变量JD_COOKIE，多账号用&分割
 # export JD_COOKIE="第1个cookie&第2个cookie"
 # 11/1 12:40 增加ck格式兼容
+"""
+const $ = new Env("发现新宝藏");
+cron 46 3,20 * * * jd_newTreasure.py
+"""
 
 import os,json,random,time,re,string
 import asyncio
