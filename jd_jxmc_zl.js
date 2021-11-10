@@ -1,6 +1,6 @@
 /**
  惊喜牧场
- cron 23 0-23/3 * * * https://github.com/JDWXX/jd_job/blob/master/jd/jd_jxmc_zl.js
+ cron 23 0-23/3 * * * 
  */
 const $ = new Env('惊喜牧场-助力');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
@@ -32,8 +32,6 @@ if ($.isNode()) {
         $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
         return;
     }
-    console.log('\nJDWXX库');
-    console.log('https://github.com/JDWXX/jd_job\n');
     for (let i = 0; i < cookiesArr.length; i++) {
         $.index = i + 1;
         $.cookie = cookiesArr[i];
