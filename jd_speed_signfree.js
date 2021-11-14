@@ -1,6 +1,7 @@
 /*
- 京东极速版,先下单,第二天开始签到
-  18 8,12,20 * * * https://github.com/zhanggaolei001/scripts/raw/main/jd_speed_signfree.js 签到免单
+  入口>京东极速版>首页>签到免单
+  京东极速版,先下单,第二天开始签到
+ cron 18 8,12,20 * * * jd_speed_signfree.js 签到免单
 */
 const $ = new Env('京东极速版签到免单')
 const notify = $.isNode() ? require('./sendNotify') : '';
@@ -16,7 +17,7 @@ if ($.isNode()) {
 } else {
     cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
-$.message = "\n"; 
+$.message = "\n";
 !(async () => {
     if (!cookiesArr[0]) {
         $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', { "open-url": "https://bean.m.jd.com/bean/signIndex.action" });
@@ -51,7 +52,7 @@ $.message = "\n";
             }
         }
     }
-    notify.sendNotify(`${$.name}`, $.message);
+    // notify.sendNotify(`${$.name}`, $.message);
 })()
     .catch((e) => {
         $.log('', `❌ ${$.name}, 失败! 原因: ${e}!`, '')
