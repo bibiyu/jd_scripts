@@ -15,7 +15,7 @@ let token = '',LZ_TOKEN_KEY = '',LZ_TOKEN_VALUE = '',Referer = '',nickname = '';
 let Host = '', venderId = ``,shopId = ``,pin =  ``,lz_jdpin_token = ``;
 let hotFlag = false;
 let attrTouXiang = '';
-$.shareUuid = '';
+$.shareUuid = 'ff36fdfd8ab046a28939c848a0c787a1';
 !(async () => {
     if (!cookiesArr[0]) {
         $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
